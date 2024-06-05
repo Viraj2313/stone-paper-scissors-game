@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    .imge{
+        width: 150px;
+        height: 150px;
+        margin: 30px;
+    }
+    button{
+        border: none;
+        margin: 20px;
+        background-color: red;
+    }
+</style>
+<body>
+
+
+    <button onclick=" let computerChoice = computerMove();
+    
+    
+    if (computerChoice === 'Stone') {
+        document.querySelector('#res').innerHTML = `Your Choice is Stone. \n Computer Choice is  ${computerChoice}. Tie`;
+    } else if (computerChoice === 'Paper') {
+        document.querySelector('#res').innerHTML = `Your Choice is Stone. \n Computer Choice is ${computerChoice}. You lose`;
+    } else {
+        document.querySelector('#res').innerHTML = `Your Choice is Stone. \n Computer Choice is ${computerChoice}. You Win`;
+    }
+
+
+    "><img src="stone.png" class="imge" alt="stone"></button>
+    <button onclick=" 
+    computerChoice = computerMove();
+    
+    
+    if (computerChoice === 'Stone') {
+        document.querySelector('#res').innerHTML = `Your Choice is Paper. Computer Choice is ${computerChoice}. You Win`;
+    } else if (computerChoice === 'Paper') {
+        document.querySelector('#res').innerHTML = `Your Choice is Paper. Computer Choice is ${computerChoice}. Tie`;
+    } else {
+        document.querySelector('#res').innerHTML = `Your Choice is Paper. Computer Choice is ${computerChoice}. You Lose`;
+    }"><img src="paper.png" class="imge" alt="paper"></button>
+    
+    
+    <button onclick=" 
+    computerChoice = computerMove();
+    
+    
+    if (computerChoice === 'Stone') {
+        document.querySelector('#res').innerHTML = `Your Choice is Scissors. Computer Choice is ${computerChoice}. You Win`;
+    } else if (computerChoice === 'Paper') {
+        document.querySelector('#res').innerHTML = `Your Choice is Scissors. Computer Choice is ${computerChoice}. Tie`
+    } else {
+        document.querySelector('#res').innerHTML = `Your Choice is Scissors. Computer Choice is ${computerChoice}. You Lose`;
+    }"><img src="scissors.png" class="imge" alt="scissors"></button>
+
+    <h1 id="res"></h1>
+    <script>
+        function computerMove() {
+            let num = Math.random() * 3;
+            if (num > 0 && num <= 1) {
+                return 'Stone';
+            } else if (num > 1 && num <= 2) {
+                return 'Paper';
+            } else {
+                return 'Scissors';
+            }
+        }
+    </script>
+</body>
+</html>
